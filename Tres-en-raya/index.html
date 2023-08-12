@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tic Tac Toe</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/6b0ad3d290.js" crossorigin="anonymous"></script>
+    </head>
+<body>
+    <main>
+        <div class="grid">
+            <!--Indicador de turnos-->
+            <div class="turn " data-id="turn">
+                <i class="fa-solid fa-x yellow"></i>
+                <p class="yellow">Player 1, you're up!</p>
+            </div>
+
+            <!--Menu colapsable-->
+            <div class="menu" data-id="menu">
+                <button class="menu-btn" data-id="menu-btn">
+                    Actions
+                    <i class ='fa-solid fa-chevron-down'></i>
+                </button> 
+
+                <div class="items border hidden"  data-id="menu-items">
+                    <button data-id="reset-btn" data-id="reset-btn">Reset</button>
+                    <button data-id="new-round-btn" data-id="new-round-btn">New Round</button>
+                </div>
+            </div>
+
+            <!--Tablero-->
+            <div id='1' class="square shadow" data-id="square"></div>
+            <div id='2' class="square shadow" data-id="square"></div>
+            <div id='3' class="square shadow" data-id="square"></div>
+            <div id='4' class="square shadow" data-id="square"></div>
+            <div id='5' class="square shadow" data-id="square"></div>
+            <div id='6' class="square shadow" data-id="square"></div>
+            <div id='7' class="square shadow" data-id="square"></div>
+            <div id='8' class="square shadow" data-id="square"></div>
+            <div id='9' class="square shadow" data-id="square"></div>
+
+            <!--Scoreboard-->
+            
+            <div class="score shadow" style="background-color: var(--turquoise);">
+            <p>Player 1</p>
+            <span data-id="player1-stats">0 wins</span>
+            </div>
+            
+            <div class="score shadow" style="background-color: var(--lightgray);">
+            <p>Ties</p>
+            <span data-id="ties">0</span>
+            </div>
+            
+            <div class="score shadow" style="background-color: var(--yellow);">
+            <p>Player 2</p>
+            <span data-id="player2-stats">0 wins</span>
+            </div>
+        </div>
+    </main>
+    <!--Modal (Aparece cuando se termina la partida)-->
+    <div class="modal hidden" data-id="modal">
+        <div class="modal-contents">
+            <p data-id="modal-text">Player 1 wins!</p>
+            <button data-id="modal-btn">Play again!</button>
+        </div>
+    </div>
+
+    <script src="JS/app.js" type="module"></script>
+</body>
+</html>
